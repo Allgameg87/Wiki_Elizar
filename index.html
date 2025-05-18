@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Аудио элемент для воспроизведения звука -->
-    <audio id="welcome-sound" src="https://www.myinstants.com/media/sounds/re0r.mp3" preload="auto"></audio>
-
     <header class="wiki-header">
         <div class="container">
             <h1 class="page-title">Wiki обо мне</h1>
@@ -103,13 +100,6 @@
     <script>
         document.getElementById('last-edited').textContent = new Date().toLocaleDateString('ru-RU');
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Воспроизведение звука при загрузке страницы
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const audio = document.getElementById('welcome-sound');
-            audio.volume = 0.5; // Установка громкости (0.0 - 1.0)
-            audio.play().catch(e => console.log("Автовоспроизведение звука заблокировано:", e));
-        });
     </script>
 </body>
 </html>
